@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanksgiving Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Thanksgiving Project</h1>
+
+    <input type="text" id="fullName" placeholder="Enter your full name">
+
+    <select id="option">
+      <option value="">Select Relationship</option>
+      <option value="family">Family</option>
+      <option value="coursemate">Coursemate</option>
+    </select>
+
+    <button onclick="showMessage()">
+      Submit
+    </button>
+
+  </div>
+
+  <!-- Popup Modal -->
+
+  <div id="popup" class="popup">
+
+    <div class="popup-content">
+
+      <span class="close-btn" onclick="closePopup()">
+        &times;
+      </span>
+
+      <div id="popup-message"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
