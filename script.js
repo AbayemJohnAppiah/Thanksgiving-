@@ -65,7 +65,6 @@ function showMessage() {
             Thank you for your love ❤️, your patience, your encouragement, and your endless support through this whole journey.<br><br> 
             May God bless you richly <i>Mr. ${titleCase(user_name)}</i>, and your beautiful wife, Ms. Parr 💍. You both are a blessing to me ❤️🙏🏻
       </p>
-        <img src="img.png" alt="" style="width: 200px; height: 200px; border-radius: 50%;">
       `;
 
         }
