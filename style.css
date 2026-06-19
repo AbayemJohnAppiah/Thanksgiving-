@@ -6,12 +6,20 @@
 }
 
 body {
+  background: #1d4ed8;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1d4ed8;
-  width: 100%;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .container {
@@ -149,6 +157,11 @@ button:hover {
   .container {
     min-width: 300px;
     padding: 15px;
+  }
+
+  img {
+    width: 180px;
+    height: 180px;
   }
 
   .container h1 {
