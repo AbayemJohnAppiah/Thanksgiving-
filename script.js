@@ -1,59 +1,59 @@
 function titleCase(str) {
-    return str
-        .toLowerCase()
-        .split(" ")
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
+      return str
+            .toLowerCase()
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
 }
 
 const family_name = ["Dominic", "Gifty", "Abigail", "Paulina", "Selom", "Parr"];
 
 const course_mate = [
-    "Maxwell", "Habiba", "Cheryl", "Courage", "David", "Pious",
-    "Jessica", "Richmond", "Kelvin", "Beyonce", "Tricia",
-    "Malik", "Gideon", "Isaac", "Kofi", "Godfred", "Kwaku", "Richard"
+      "Maxwell", "Habiba", "Cheryl", "Courage", "David", "Pious",
+      "Jessica", "Richmond", "Kelvin", "Beyonce", "Tricia",
+      "Malik", "Gideon", "Isaac", "Kofi", "Godfred", "Kwaku", "Richard", "Vanessa"
 ];
 
 function showMessage() {
 
-    let user_name = document.getElementById("fullName").value.toLowerCase().trim();
-    let option = document.getElementById("option").value.toLowerCase();
+      let user_name = document.getElementById("fullName").value.toLowerCase().trim();
+      let option = document.getElementById("option").value.toLowerCase();
 
-    let popup = document.getElementById("popup");
-    let message = document.getElementById("popup-message");
+      let popup = document.getElementById("popup");
+      let message = document.getElementById("popup-message");
 
-    let words = user_name.split(" ");
+      let words = user_name.split(" ");
 
-    const familyNames = family_name.map(name => name.toLowerCase());
-    const courseNames = course_mate.map(name => name.toLowerCase());
+      const familyNames = family_name.map(name => name.toLowerCase());
+      const courseNames = course_mate.map(name => name.toLowerCase());
 
-    // Empty name
-    if (user_name === "") {
-        message.innerHTML = `
+      // Empty name
+      if (user_name === "") {
+            message.innerHTML = `
       <h2>Error</h2>
       <p>Please enter your full name.</p>
     `;
-        popup.style.display = "flex";
-        return;
-    }
+            popup.style.display = "flex";
+            return;
+      }
 
-    // Empty relationship
-    if (option === "") {
-        message.innerHTML = `
+      // Empty relationship
+      if (option === "") {
+            message.innerHTML = `
       <h2>Hello ${titleCase(user_name)}</h2>
       <p>Please select Family or Coursemate.</p>
     `;
-        popup.style.display = "flex";
-        return;
-    }
+            popup.style.display = "flex";
+            return;
+      }
 
-    // ================= FAMILY =================
+      // ================= FAMILY =================
 
-    if (option === "family") {
+      if (option === "family") {
 
-        if (words.includes("dominic")) {
+            if (words.includes("dominic")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -65,13 +65,14 @@ function showMessage() {
             Thank you for your love ❤️, your patience, your encouragement, and your endless support through this whole journey.<br><br> 
             May God bless you richly <i>Mr. ${titleCase(user_name)}</i>, and your beautiful wife, Ms. Parr 💍. You both are a blessing to me ❤️🙏🏻
       </p>
+      <a href="image/dominic.jpg">Click Me</a>
       `;
 
-        }
+            }
 
-        else if (words.includes("gifty")) {
+            else if (words.includes("gifty")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mrs. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -83,12 +84,13 @@ function showMessage() {
             Thank you for your love ❤️, your patience ⏳, your tough love when I needed it, and your endless support through this whole journey.<br><br>  
             May God bless you richly, <i>Mrs. ${titleCase(user_name)}</i>, your boys Ethan and Nathan 👦👦, and your handsome husband Mr. Amouzou Selom. You all are a blessing to me and I'm so proud to call you my sister ❤️
       </p>
+      <a href="image/gifty.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("abigail")) {
+            else if (words.includes("abigail")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -99,12 +101,13 @@ function showMessage() {
             Thank you for your love ❤️, your patience ⏳, your encouragement when I was down, and your endless support through this whole journey.<br><br>
             May God bless you richly, <i>Ms. ${titleCase(user_name)}</i> 🙏 and your future husband. You're a blessing to me and I'm so proud God gave me a sister like you ❤️
       </p>
+      <a href="image/abigail.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("paulina")) {
+            else if (words.includes("paulina")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -117,12 +120,13 @@ function showMessage() {
             You took our family to this place with your own hands 💪.<br><br>  
             May God bless you richly, <i>Ms. ${titleCase(user_name)}</i> 🙏. You're our hero, our covering, and I'm so proud to call you my big sister ❤️
       </p>
+      <a href="image/miccy.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("selom")) {
+            else if (words.includes("selom")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -134,12 +138,13 @@ function showMessage() {
             <br>
             Still I'm the Boss 🎮😝
       </p>
+      <a href="image/bra_selom.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("parr")) {
+            else if (words.includes("parr")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mrs. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -151,12 +156,13 @@ function showMessage() {
             May your home be filled with joy, favor, and abundant peace.<br>  
             We are glad to have you with us. You are truly welcome, ma’am 🎉
       </p>
+      <a href="image/mrs_Parr.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (!words.some(word => familyNames.includes(word))) {
+            else if (!words.some(word => familyNames.includes(word))) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2>${titleCase(user_name)}</h2>
 
       <p>
@@ -164,16 +170,16 @@ function showMessage() {
       Try again.
       </p>
       `;
-        }
-    }
+            }
+      }
 
-    // ================= COURSEMATE =================
+      // ================= COURSEMATE =================
 
-    else if (option === "coursemate") {
+      else if (option === "coursemate") {
 
-        if (words.includes("maxwell")) {
+            if (words.includes("maxwell")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -185,12 +191,13 @@ function showMessage() {
             Thank you for your friendship, your patience, and for pushing me to do better even when I wanted to give up 💪.<br><br>   
             Thank you for your service, your sacrifice, and your leadership. May God bless you richly with wisdom, strength, and favor 🙏. Our class is better because of you, and I'm truly grateful <i>${titleCase(user_name)}</i> ❤️ 
       </p>
+      <a href="image/maxwell.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("habiba")) {
+            else if (words.includes("habiba")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -199,12 +206,13 @@ function showMessage() {
             Thank you for your friendship, your patience, and for always showing up when it matters.<br><br> 
             May Allah bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you've done for me ❤️. I'm truly grateful for you. 
       </p>
+      <a href="image/habiba_trappie.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("cheryl")) {
+            else if (words.includes("cheryl")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -215,15 +223,15 @@ function showMessage() {
             Beyond books, thank you for your kindness, your patience, and for always encouraging me. You inspire me to be better — in class and in life.<br><br> 
             May God bless you richly <i>Ms. ${titleCase(user_name)}</i>!, and reward you for every good thing you do 🙏. I'm truly grateful you're in my class and in my life.
             <br><br>
-            Still LOVE YOU ❤️🥹 <br>
             Lecturer's wife🤭, who am I?.
       </p>
+      <a href="image/cheryl.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("courage")) {
+            else if (words.includes("courage")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -236,12 +244,13 @@ function showMessage() {
             <br>
             We are family🤭
       </p>
+      <a href="image/courage.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("david")) {
+            else if (words.includes("david")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -253,12 +262,13 @@ function showMessage() {
             May God bless you richly <i>${titleCase(user_name)}</i>, and pay you back for every time you lifted me up 🙏. I'm grateful God gave me a brother in you, not just a classmate.  
             I've got your back too, always. More wins for us together 🎓❤️
       </p>
+      <a href="image/david.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("pious")) {
+            else if (words.includes("pious")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -270,12 +280,13 @@ function showMessage() {
             May God bless you richly <i>${titleCase(user_name)}</i>, and pay you back for every time you lifted me up 🙏. I'm grateful God gave me a brother in you, not just a classmate.  
             I've got your back too, always. More wins for us together 🎓❤️
       </p>
+      <a href="image/pious.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("jessica")) {
+            else if (words.includes("jessica")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -285,11 +296,11 @@ function showMessage() {
             May Allah bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you do ❤️. Wishing you success and favor this season and beyond 🎓
       </p>
       `;
-        }
+            }
 
-        else if (words.includes("richmond")) {
+            else if (words.includes("richmond")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -300,12 +311,13 @@ function showMessage() {
             <br>
             Kasoa Boy 😅
       </p>
+      <a href="image/richmond.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("kelvin")) {
+            else if (words.includes("kelvin")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -315,11 +327,11 @@ function showMessage() {
             May God bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you do ❤️. Wishing you success and favor this season and beyond 🎓
       </p>
       `;
-        }
+            }
 
-        else if (words.includes("beyonce")) {
+            else if (words.includes("beyonce")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -331,12 +343,13 @@ function showMessage() {
             <br>
             You don't like coming to class at all 😀😏
       </p>
+      <a href="image/beyonce.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("tricia")) {
+            else if (words.includes("tricia")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Ms. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -346,12 +359,13 @@ function showMessage() {
             <br><br>
             May God bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you do ❤️. Wishing you success and favor this season and beyond 🎓
       </p>
+      <a href="image/tricia.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("malik")) {
+            else if (words.includes("malik")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -361,12 +375,13 @@ function showMessage() {
             <br><br>
             May Allah bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you do ❤️. Wishing you success and favor this season and beyond 🎓
       </p>
+      <a href="image/malik.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("gideon")) {
+            else if (words.includes("gideon")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -380,12 +395,13 @@ function showMessage() {
             <br>
             Always you dey get banned, who you be!!?? 😝
       </p>
+      <a href="image/gideon.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("isaac")) {
+            else if (words.includes("isaac")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -397,12 +413,13 @@ function showMessage() {
             <br>
             Always traffic 😅
       </p>
+      <a href="image/habiba_trappie.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("kofi")) {
+            else if (words.includes("kofi")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -415,11 +432,11 @@ function showMessage() {
             Stop sleeping in class😂
       </p>
       `;
-        }
+            }
 
-        else if (words.includes("godfred")) {
+            else if (words.includes("godfred")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -431,12 +448,13 @@ function showMessage() {
             <br>
             ON GOD🙌🏼
       </p>
+      <a href="image/godfred.jpg">Click Me</a>
       `;
-        }
+            }
 
-        else if (words.includes("kwaku")) {
+            else if (words.includes("kwaku")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -447,11 +465,11 @@ function showMessage() {
             May God bless you richly <i>${titleCase(user_name)}</i>, and reward you for every good thing you do ❤️. Wishing you success and favor this season and beyond 🎓
       </p>
       `;
-        }
+            }
 
-        else if (words.includes("richard")) {
+            else if (words.includes("richard")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
       <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
 
       <p>
@@ -463,12 +481,34 @@ function showMessage() {
             <br>
             You don't like coming to class at all😅
       </p>
+      <a href="image/mj.MP4">Click Me</a>
       `;
-        }
+            }
 
-        else if (!words.some(word => courseNames.includes(word))) {
+            else if (words.includes("vanessa")) {
 
-            message.innerHTML = `
+                  message.innerHTML = `
+      <h2><i>Good day Mr. ${titleCase(user_name)}!</i></h2>
+
+      <p>
+            Today is a special day and I just have to say thank you to you <i>Ms. ${titleCase(user_name)}</i>❤️<br>
+            Thank you for being part of my journey, even when I didn't get enough time to truly express how I feel about you 📚.<br>
+            I have always wanted to tell you how special you are to me, how much I admire and love you, but time never gave me that
+            chance 📝💕.<br>
+            Still, having you around makes everything meaningful. Your smile, your presence, and your kindness mean a lot to me
+            🤝.<br>
+            Beyond everything, thank you for being you — for your beauty, your heart, and for unknowingly being my
+            inspiration.<br><br>
+            May God bless you richly <i>Ms. ${titleCase(user_name)}</i>!, and may life be kind to you in every way 🙏. I'm truly
+            grateful you are part of my journey.
+      </p>
+      <a href="image/vanessa.MP4">Click Me</a>
+      `;
+            }
+
+            else if (!words.some(word => courseNames.includes(word))) {
+
+                  message.innerHTML = `
       <h2>Hello ${titleCase(user_name)}!</h2>
 
       <p>
@@ -476,12 +516,12 @@ function showMessage() {
       May God bless you richly.
       </p>
       `;
-        }
-    }
+            }
+      }
 
-    popup.style.display = "flex";
+      popup.style.display = "flex";
 }
 
 function closePopup() {
-    document.getElementById("popup").style.display = "none";
+      document.getElementById("popup").style.display = "none";
 }
